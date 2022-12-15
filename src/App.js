@@ -6,39 +6,29 @@ import Time from "./componentes/Time";
 function App() {
   const times = [
     {
-      nome: "Programaçao",
+      nome: "TOP",
       corPrimaria: "#57c278",
       corSecundaria: "#d9f7e9",
     },
     {
-      nome: "Front-end",
+      nome: "MID",
       corPrimaria: "#82cffa",
       corSecundaria: "#e8f8ff",
     },
     {
-      nome: "Data Science",
+      nome: "ADC",
       corPrimaria: "#a6d157",
       corSecundaria: "#f0f8e2",
     },
     {
-      nome: "Devops",
+      nome: "Suporte",
       corPrimaria: "#e06b69",
       corSecundaria: "#fde7e8",
     },
     {
-      nome: "UX e Design",
+      nome: "Jungle",
       corPrimaria: "#db6ebf",
       corSecundaria: "#fae9f5",
-    },
-    {
-      nome: "Mobile",
-      corPrimaria: "#ffba05",
-      corSecundaria: "#fff5d9",
-    },
-    {
-      nome: "Inovação e Gestão",
-      corPrimaria: "#ff8a29",
-      corSecundaria: "#ffeedf",
     },
   ];
 
@@ -51,13 +41,15 @@ function App() {
 
   return (
     <div className="App">
-      <Banner></Banner>
-      <Formulario
-        NomeTimes={times.map((time) => time.nome)}
-        aoColaboradorCadastrado={(colaborador) =>
-          aoNovoColaboradorAdicionado(colaborador)
-        }
-      ></Formulario>
+      <div className="fundo">
+        <Banner></Banner>
+        <Formulario
+          NomeTimes={times.map((time) => time.nome)}
+          aoColaboradorCadastrado={(colaborador) =>
+            aoNovoColaboradorAdicionado(colaborador)
+          }
+        ></Formulario>
+      </div>
       {times.map((time) => (
         <Time
           key={time.nome}

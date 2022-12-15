@@ -32,8 +32,8 @@ const Formulario = (props) => {
         ></CampoTexto>
         <CampoTexto
           obrigatorio={true}
-          label="Cargo"
-          placeholder="Digite seu cargo"
+          label="Função"
+          placeholder="Digite sua Função"
           valor={cargo}
           aoAlterar={(valor) => setCargo(valor)}
         ></CampoTexto>
@@ -44,7 +44,7 @@ const Formulario = (props) => {
           aoAlterar={(valor) => setImagem(valor)}
         ></CampoTexto>
         <ListaSuspensa
-          label="Time"
+          label="Cargo"
           itens={props.NomeTimes}
           valor={time}
           aoAlterar={(valor) => setTime(valor)}
